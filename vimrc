@@ -245,12 +245,12 @@
         endif
     "}}}
     " vim-scripts/taglist.vim: Better tags navigation for different languages{{{
-        Plug 'vim-scripts/taglist.vim'
+        "Plug 'vim-scripts/taglist.vim'
 
-        " Open taglist with _
-        nnoremap <silent> _ :TlistToggle<CR>
-        " process files even when the taglist windows is not open
-        let Tlist_Process_File_Always = 1
+        "" Open taglist with _
+        "nnoremap <silent> _ :TlistToggle<CR>
+        "" process files even when the taglist windows is not open
+        "let Tlist_Process_File_Always = 1
     " }}}
     " tpope/vim-vinegar: Make netrw better {{{
         "Plug 'tpope/vim-vinegar'

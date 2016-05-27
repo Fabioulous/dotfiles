@@ -20,9 +20,9 @@ if which tmux >/dev/null 2>&1; then
     test -z ${TMUX} && (tmux attach || tmux new)
 
     # when quitting tmux, try to attach
-    #while test -z ${TMUX}; do
-        #tmux attach || break
-    #done
+    while test -z ${TMUX}; do
+        tmux attach || break
+    done
 fi
 
 #------------------------------------------------------------
@@ -101,7 +101,6 @@ if [ "$color_prompt" = yes ]; then
 \[\033[32m\]\H\
 \[\033[37m\] \
 \[\033[33m\]$(__pwd_ps1) \
-\[\033[35m\]$(__git_ps1 "[%s]") \
 \[\e[m\]'
 
 else
@@ -165,3 +164,8 @@ export EDITOR=$VISUAL
 
 # use vim mode
 set -o vi
+
+#------------------------------------------------------------
+#       Make cygwin go to windows home
+export HOMEW="/cygdrive/c/Users/afabre"
+cd $HOMEW
